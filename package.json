@@ -1,14 +1,14 @@
 {
-    "name": "hyper-shellect2",
+    "name": "hyper-shellect-fork",
     "version": "0.4.1",
     "private": false,
     "description": "cross-platform shell selection for hyper",
     "repository": {
         "type": "git",
-        "url": "https://github.com/paulomanrique/hyper-shellect2"
+        "url": "https://github.com/siris01/hyper-shellect-fork"
     },
     "author": {
-        "name": "Paulo Manrique"
+        "name": "Siris"
     },
     "license": "GPL-3.0",
     "dependencies": {
