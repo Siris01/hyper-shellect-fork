@@ -7,7 +7,14 @@ module.exports = (file = '.env.json') => ((filtered) => Object.assign(process.en
           (acc[v] = JSON.stringify(obj[v]))
     return acc
   }, {}))(
-    ((toString) => JSON.parse(toString))(
+    ((toString) => {
+      try {
+        return JSON.parse(toString)
+      } catch (e) {
+        console.error(`Unable to parse ${file}`)
+        return {}
+      }
+    })(
       ((path) => fs.readFileSync(path, 'utf-8'))(
         ((name) => path.resolve(process.cwd(), name))(file)
       )

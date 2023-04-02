@@ -6,7 +6,7 @@ function clearTerm () {
   process.stdout.write('\x1B[2J\x1B[0f')
 }
 
-const isWindows = process.platform === "win32";
+const isWindows = process.platform === 'win32'
 
 const prompt = {
   command: '',
@@ -118,7 +118,7 @@ async function spawnShell () {
         const spawnArgs = ['-tt',
           url
         ]
-        childProcess = await spawn(isWindows ? 'C:\Windows\System32\OpenSSH\ssh.exe': '/usr/bin/ssh', spawnArgs, {
+        childProcess = await spawn(isWindows ? 'C:\\Windows\\System32\\OpenSSH\\ssh.exe' : '/usr/bin/ssh', spawnArgs, {
           stdio: [process.stdin, process.stdout, process.stderr],
           detached: false
         })
